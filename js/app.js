@@ -2,23 +2,24 @@ $(document).ready(function() {
 	var listitems ="";
 	var count;
 	for (count = 1; count < 101; count++) {
-		listitems += "<li>";
+		//listitems += "<li>";
 		if((count % 3 === 0) && (count % 5 === 0)) {
-			listitems += "fizzbuzz";
+			listitems += "<li>fizzbuzz</li>";
 			console.log(count);
 		}
 		else if (count % 3 === 0) {
-			listitems += "fizz";
+			listitems += "<li>fizz</li>";
 			console.log(count);
 		}
 		else if (count % 5 === 0) {
-			listitems += "buzz";
+			listitems += "<li>buzz</li>";
 			console.log(count);	
 		}
 		else {
-			listitems += count;
+			listitems += "<li>"+count+"</li>";
 		}
-		listitems += "</li>";
+		//listitems += "</li>";
 	}
-	list.innerHTML +=listitems;
+	$('#list').html(listitems);
+	//list.innerHTML +=listitems;
 })
