@@ -1,7 +1,11 @@
 $(document).ready(function() {
+
+	var numberPrompt = prompt("Please enter a number to count to","");
+	var endNumber = parseInt(numberPrompt);
+
 	var listitems ="";
 	var count;
-	for (count = 1; count < 101; count++) {
+	for (count = 1; count < endNumber; count++) {
 		//listitems += "<li>";
 		if((count % 3 === 0) && (count % 5 === 0)) {
 			listitems += "<li>fizzbuzz</li>";
@@ -23,4 +27,4 @@ $(document).ready(function() {
 	$('#list').html(listitems);
 	//list.innerHTML +=listitems;
 })
-sds
+
